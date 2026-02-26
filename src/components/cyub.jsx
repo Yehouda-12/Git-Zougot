@@ -1,11 +1,11 @@
 
-function cyub({id}) {
+
+function Cyub({ isBomb }) {
   return (
-    <div className='cyub' id={id}>a</div>
-  )
+    <div className="cell">
+      {isBomb ? "💣" : ""}
+    </div>
+  );
 }
-export default cyub
 
-
-
-
+export default Cyub;
