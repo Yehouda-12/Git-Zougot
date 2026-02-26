@@ -1,12 +1,145 @@
-#root{
-  background-color: #05143d;
-  height: 100%;
-  min-width: 100%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding: 0;
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  background-color: #05143d;
+  min-height: 100vh;
+  width: 60%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
+/* NAVBAR */
+
+.navbar {
+  background-color: #05143d;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.navbar img {
+  height: 60px;
+}
+
+.navbar .logo {
+  margin: 0;
+  color: rgb(206, 206, 206);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.navbar .status {
+  margin: 0;
+  color: greenyellow;
+  font-weight: bold;
+}
+
+/* GRID */
+
+.grid-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  gap: 8px;
+  padding: 20px;
+  background-color: rgb(31, 20, 94);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* CELL */
+
+.cell {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid blue;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(179, 179, 223, 0.295);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 20px;
+}
+
+.cell:hover {
+  background-color: rgba(179, 179, 223, 0.6);
+  transform: scale(1.05);
+}
+
+
+
+/* CARD CONTAINER */
+.card-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* CARD */
+
+.card {
+  background: linear-gradient(
+    145deg,
+    rgb(6, 112, 199),
+    rgb(31, 20, 94)
+  );
+
+  width: 180px;
+  height: 80px;
+
+  border-radius: 16px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  border-bottom: 5px solid lightskyblue;
+
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgb(206, 206, 206);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
