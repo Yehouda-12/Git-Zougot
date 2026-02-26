@@ -8,11 +8,10 @@ function App() {
   return (
   <>
   <Navbar />
+    <BordGrid/>
   </>
   )
-  return <>
-  <BordGrid/>
-  </>;
+
 }
 
 export default App;
