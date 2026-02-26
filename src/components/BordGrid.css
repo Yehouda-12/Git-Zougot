@@ -1,8 +1,0 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(10,1fr) ;
-    background-color: rgb(31, 20, 94);
-    gap: 5px;
- 
-}
-

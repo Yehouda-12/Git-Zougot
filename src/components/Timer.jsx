@@ -91,7 +91,7 @@ const Timer = () => {
     return (
         <>
             {timer}
-            <button onClick={onClickReset}>Reset</button>
+            
         </>
     );
 };

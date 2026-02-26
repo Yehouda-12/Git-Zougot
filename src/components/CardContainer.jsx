@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import Timer from "./Timer";
-import './CardContainer.css'
+
 
 function CardContainer() {
   return (

@@ -1,4 +1,3 @@
-import './cyub.css'
 
 
 function Cyub({ isBomb }) {

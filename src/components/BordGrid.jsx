@@ -1,5 +1,5 @@
 import Cyub from "./cyub";
-import "./BordGrid.css";
+
 import { generateBombs } from "../utils/bombRandom";
 import { useMemo } from "react";
 
