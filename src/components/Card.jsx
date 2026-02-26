@@ -1,7 +1,7 @@
 function Card({headLine, context}) {
   return (
     <>
-        <h6>{headLine}</h6>
+        <h2>{headLine}</h2>
         <p>{context}</p>
     </>
   )
