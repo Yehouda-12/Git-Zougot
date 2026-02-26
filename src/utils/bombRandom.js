@@ -1,15 +1,10 @@
-export function generateBombs(size, bombCount) {
+export function generateBombs(totalCells, bombCount) {
   const bombs = new Set();
 
   while (bombs.size < bombCount) {
-    const row = Math.floor(Math.random() * size);
-    const col = Math.floor(Math.random() * size);
-
-    bombs.add(`${row}-${col}`);
+    const randomIndex = Math.floor(Math.random() * totalCells);
+    bombs.add(randomIndex);
   }
 
   return bombs;
 }
-
-
-
