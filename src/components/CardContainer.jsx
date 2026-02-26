@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "./Card";
 import Timer from "./Timer";
+import GameSettingsContext from "../contexts/GameSettingsContext";
 
+function CardContainer({ bombsRemaining }) {
+  const { gridSize } = useContext(GameSettingsContext);
 
-function CardContainer() {
   return (
     <div className="card-container">
-      <Card headLine={"Time Remaining"} context={<Timer />} />
-      <Card headLine={"Bombs Remaining"} context={5} />
-      <Card headLine={"Board Size"} context={"10 * 8"} />
+      <Card headLine="Time Remaining" context={<Timer />} />
+      <Card headLine="Bombs Remaining" context={bombsRemaining} />
+      <Card headLine="Board Size" context={`${gridSize} x ${gridSize}`} />
     </div>
   );
 }

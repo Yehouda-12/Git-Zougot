@@ -1,9 +1,10 @@
-
-
-function Cyub({ isBomb }) {
+function Cyub({ isBomb, isRevealed, onClick }) {
   return (
-    <div className="cell">
-      {isBomb ? "💣" : ""}
+    <div
+      className={`cell ${isRevealed ? "revealed" : ""}`}
+      onClick={onClick}
+    >
+      {isRevealed && isBomb && "💣"}
     </div>
   );
 }

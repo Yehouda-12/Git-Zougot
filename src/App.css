@@ -60,27 +60,6 @@ html, body {
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-/* CELL */
-
-.cell {
-  display: flex;
-  width: 40px;
-  height: 40px;
-  border: 1px solid blue;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(179, 179, 223, 0.295);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 20px;
-}
-
-.cell:hover {
-  background-color: rgba(179, 179, 223, 0.6);
-  transform: scale(1.05);
-}
-
 
 
 /* CARD CONTAINER */
@@ -154,4 +133,28 @@ html, body {
   min-width: 40%;
   margin-top: 30px;
   
+}
+.cell {
+  display: flex;
+  width: 3vw;
+  height: 5vh;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(179, 179, 223, 0.3);
+  border: 1px solid #2a4bb5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.cell.revealed {
+  background-color: #d6d6ff;
+}
+
+.cell.bomb {
+  background-color: #a00000;
 }
