@@ -1,6 +1,3 @@
-import './ResetButton.css'
-
-
 function ResetButton() {
   return (
     <>
