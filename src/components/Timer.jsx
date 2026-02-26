@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const Timer = () => {
+const Timer = ({setEndTime}) => {
     // We need ref in this, because we are dealing
     // with JS setInterval to keep track of it and
     // stop it when needed
@@ -8,6 +8,7 @@ const Timer = () => {
 
     // The state for our timer
     const [timer, setTimer] = useState("00:00:00");
+   
 
     const getTimeRemaining = (e) => {
         const total =
@@ -44,6 +45,10 @@ const Timer = () => {
                 (seconds > 9 ? seconds : "0" + seconds)
             );
         }
+        if(total === 0){
+            setEndTime(true)
+        }
+
     };
 
     const clearTimer = (e) => {
@@ -80,6 +85,8 @@ const Timer = () => {
         clearTimer(getDeadTime());
     }, []);
 
+    
+
     // Another way to call the clearTimer() to start
     // the countdown is via action event from the
     // button first we create function to be called
@@ -87,11 +94,11 @@ const Timer = () => {
     const onClickReset = () => {
         clearTimer(getDeadTime());
     };
-   
+    
     return (
         <>
             {timer}
-            
+           
         </>
     );
 };
